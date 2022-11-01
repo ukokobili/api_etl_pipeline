@@ -1,0 +1,20 @@
+services:
+  marvel:
+    image: postgres:15
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=marvel_db
+    volumes:
+      - "./marvel_data:/var/lib/postgresql/data:rw"
+    ports:
+      - "5432:5432"
+  # marvelApi:
+  #   image: dpage/pgadmin4
+  #   environment:
+  #     - PGADMIN_DEFAULT_EMAIL=admin@admin.com
+  #     - PGADMIN_DEFAULT_PASSWORD=admin
+  #   # volumes:
+  #   #   - "./data_pgadmin:/var/lib/pgadmin"
+  #   # ports:
+  #     - "8080:80"
