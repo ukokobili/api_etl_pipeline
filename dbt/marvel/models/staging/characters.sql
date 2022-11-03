@@ -3,7 +3,6 @@
 select 
 
     -- identifier
-    {{dbt_ut   }}
     cast(id as integer) as character_id,
 
     -- character info
