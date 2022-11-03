@@ -3,7 +3,7 @@
 select 
 
     -- identifier
-    cast(id as integer) as character_id,
+    cast(id as text) as character_id,
 
     -- character info
     cast(name as text) as name,

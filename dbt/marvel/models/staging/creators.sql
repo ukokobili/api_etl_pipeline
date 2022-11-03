@@ -3,8 +3,8 @@
 select 
 
     -- identifier
-    cast(creators_id as integer) as creators_id,
-    cast(character_id as integer) as character_id,
+    cast(creators_id as text) as creators_id,
+    cast(character_id as text) as character_id,
 
     -- creators info
     cast(creators as text) as creators_name,

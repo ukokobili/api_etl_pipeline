@@ -3,7 +3,7 @@
 with characters as (
     select
         *
-    from {{ ref('character') }}
+    from {{ ref('characters') }}
 ),
 
 comics as (
@@ -24,7 +24,7 @@ events as (
     from {{ ref('events') }}
 ),
 
-events as (
+series as (
     select
         * 
     from {{ ref('series_table') }}
@@ -38,18 +38,27 @@ stories as (
 
 select 
     c.character_id,
-    
-
-from characters c
-left join comics m 
+    m.comics_id,
+    r.creators_id,
+    c.name,
+    e.events_id,
+    s.series_id,
+    t.stories_id,
+    c.description as character_description,
+    c.modified_date as character_modified_date,
+    m.print_price as comics_print_price,  
+    m.digital_purchase_price as comics_digital_purchase_price,
+    m.number_of_pages
+from characters as c
+left join comics as m 
 on c.character_id = m.character_id
-left join creators r 
+left join creators as r 
 on c.character_id = r.character_id
-left join events e 
+left join events as e 
 on c.character_id = e.character_id
-left join series s 
+left join series as s 
 on c.character_id = s.character_id
-left join stories t 
+left join stories as t 
 on c.character_id = t.character_id
 
 

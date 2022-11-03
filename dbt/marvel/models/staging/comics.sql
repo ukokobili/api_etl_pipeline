@@ -3,8 +3,8 @@
 select 
 
     -- identifier
-    cast(id as integer) as comics_id,
-    cast(character_id as integer) as character_id,
+    cast(id as text) as comics_id,
+    cast(character_id as text) as character_id,
 
     -- comics info
     cast(title as text) as title,
