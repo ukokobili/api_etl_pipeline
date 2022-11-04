@@ -40,7 +40,7 @@ select
     c.character_id,
     m.comics_id,
     r.creators_id,
-    c.name,
+    c.name as character_name,
     e.events_id,
     s.series_id,
     t.stories_id,
