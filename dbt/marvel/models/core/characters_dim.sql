@@ -7,13 +7,13 @@ with dim as (
 )
 
 select 
-    -- Comics Revenue Calculations
+    -- Character with highest number of comics
     character_id,
     character_name,
-    avg(comics_print_price)  as avg_comics_print_price,
-    avg(comics_digital_purchase_price) as avg_comics_digital_purchase_price,
-    (comics_digital_purchase_price - comics_print_price) as comics_profit_loss,
+    number_of_pages_per_comics,
     count(comics_id) as number_of_comics,
-    avg(number_of_pages) as avg_number_of_pages_per_comics
+    sum(comics_print_price) as total_print_price,
+    sum(comics_digital_purchase_price) as total_purchase_price
 from dim
-group by 1, 2, 5
+group by 1, 2, 3
+order by 4 desc

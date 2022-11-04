@@ -13,14 +13,14 @@ id,title,description,modified_date,start_year,end_year,rating,type,character_id,
 35600,Avengers Unlimited Infinity Comic (2022 - Present),,2022-07-08T06:32:45-0400,2022,2023,,,1009144,103355
 227,Avengers Vol. 2: Red Zone (2003),,-0001-11-30T00:00:00-0500,2003,2003,MARVEL PSR,collection,1009144,1170
 271,Avengers Vol. II: Red Zone (2003),,-0001-11-30T00:00:00-0500,2003,2003,MARVEL PSR,collection,1009144,1214
-1996,Captain America (1968 - 1996),"The Star-Spangled Avenger fights for freedom! Emerging from years on ice following World War II, Steve Rogers must adapt to a world that has gone on without him while also protecting his nation from the forces that would conspire to tear it apart!",2013-03-01T13:26:08-0500,1968,1996,,ongoing,1009144,7481
 1997,Captain America (1998 - 2002),,2013-03-01T13:34:02-0500,1998,2002,,ongoing,1009144,12767
+1996,Captain America (1968 - 1996),"The Star-Spangled Avenger fights for freedom! Emerging from years on ice following World War II, Steve Rogers must adapt to a world that has gone on without him while also protecting his nation from the forces that would conspire to tear it apart!",2013-03-01T13:26:08-0500,1968,1996,,ongoing,1009144,7481
 23810,"Captain America by Mark Waid, Ron Garney & Andy Kubert (2017)",,2017-12-01T14:59:39-0500,2017,2017,,collection,1009144,65466
 3743,Defenders (1972 - 1986),,2018-05-03T12:57:47-0400,1972,1986,,,1009144,20262
 8842,Incredible Hulks (2010 - 2011),"Nobody loves you like your family--and nobody can you make you quite as crazy! With his son Skaar, cousin She-Hulk, ex-wife Red She-Hulk and more, Bruce Banner, aka the Incredible Hulk, attempts to harness his Gamma-powered brood for good!",2018-02-20T11:25:47-0500,2010,2011,,,1009144,31074
 16583,Indestructible Hulk (2012 - 2014),"Hulk - Indestructible force more weapon than man. Banner - smartest man alive. Combined they are the Strongest, Smartest Weapon on the planet! And NOW! the INDESTRUCTIBLE HULK is an Agent of S.H.I.E.L.D.!",2019-09-13T15:39:44-0400,2012,2014,,,1009144,43911
-2029,Iron Man (1968 - 1996),The Armored Avenger battles super villains as well as corporate sabotage and his own personal demons in this landmark series! See the stories that formed the basis for Tony Stark becoming a household name!,2013-05-21T13:22:55-0400,1968,1996,,,1009144,9327
 16593,Iron Man (2012 - 2014),"Tony Stark-Iron Man: Technological visionary, wealthy playboy, unparalleled engineer, and armored Avenger. His greatest invention becomes his greatest mistake. Iron Man must act fast...and Tony Stark must build faster! The lethal techno virus Extremis is out in the wild and out for grabs to the highest bidder! It's up to Tony Stark to contain it and that means creating a new suit of armor...NOW!",2021-11-01T11:49:32-0400,2012,2014,,,1009144,43944
+2029,Iron Man (1968 - 1996),The Armored Avenger battles super villains as well as corporate sabotage and his own personal demons in this landmark series! See the stories that formed the basis for Tony Stark becoming a household name!,2013-05-21T13:22:55-0400,1968,1996,,,1009144,9327
 23915,Iron Man Epic Collection: Doom (2018),,2018-01-18T17:44:18-0500,2018,2018,,collection,1009144,65941
 9718,Marvel Adventures Super Heroes (2010 - 2012),"The perfect line to introduce young readers to the Marvel Universe, Marvel Adventures titles takes a classic comic sensibility and fuses it with an unmistakably modern style and wit.  Marvel Adventures Super Heroes is loaded with the best team-ups around featuring all your favorite heroes including Spider-Man, Hulk, Iron Man and the rest of the Marvel Universe!",2012-03-22T10:49:39-0400,2010,2012,ALL AGES,ongoing,1009144,30119
 189,Marvel Masterworks: Captain America Vol. 1 - 2nd Edition (2003),,-0001-11-30T00:00:00-0500,2003,2003,ALL AGES,collection,1009144,1130
@@ -31,8 +31,8 @@ id,title,description,modified_date,start_year,end_year,rating,type,character_id,
 158,Avengers Vol. 1: World Trust (2003),,-0001-11-30T00:00:00-0500,2003,2003,MARVEL PSR,collection,1009146,1098
 378,Earth X (1999 - 2000),,2020-03-24T12:12:17-0400,1999,2000,,,1009146,8546
 1806,EARTH X TPB [NEW PRINTING] (2006),,-0001-11-30T00:00:00-0500,2006,2006,RATED T+,collection,1009146,4241
-3374,Hulk (2008 - 2012),"General Thunderbolt Ross spent years hunting the Hulk, but now he's become one himself! As the rampaging Red Hulk, Ross strives to reconcile the man he used to be with the monster he's becomes, smashing anything that moves along the way!",2019-09-05T14:34:04-0400,2008,2012,,,1017100,17623
 465,Hulk (1999 - 2008),The Hulk goes from fugitive to interstellar gladiator in this eclectic series featuring Greg Pak's classic Planet Hulk epic!,2019-06-25T09:13:37-0400,1999,2008,,,1009146,14269
+3374,Hulk (2008 - 2012),"General Thunderbolt Ross spent years hunting the Hulk, but now he's become one himself! As the rampaging Red Hulk, Ross strives to reconcile the man he used to be with the monster he's becomes, smashing anything that moves along the way!",2019-09-05T14:34:04-0400,2008,2012,,,1017100,17623
 924,Hulk: Destruction (2005),,2018-02-15T12:10:23-0500,2005,2005,Parental Advisory,,1009146,2244
 2021,Incredible Hulk (1962 - 1999),"Trapped in a the radioactive blast of a Gamma Bomb, withdrawn Doctor Bruce Banner becomes the rampaging Incredible Hulk! Witness the evolution of Marvel's most unstoppable force, from sinister brute to uncontrollable beast and every stage in between.",2016-09-22T16:36:43-0400,1962,1999,,,1009146,8906
 2983,Incredible Hulk Annual (1976 - 1994),"Is he a man, monster or both? It's the Incredible Hulk, born of a gamma blast that scientist Bruce Banner was caught in.",2021-05-13T14:25:25-0400,1976,1994,,,1009146,16878
@@ -58,8 +58,8 @@ id,title,description,modified_date,start_year,end_year,rating,type,character_id,
 1997,Captain America (1998 - 2002),,2013-03-01T13:34:02-0500,1998,2002,,ongoing,1009144,12767
 3745,Dazzler (1981 - 1986),,2018-02-16T11:45:05-0500,1981,1986,,,1009148,20418
 2005,Deadpool (1997 - 2002),"Wade Wilson: Heartless Merc With a Mouth or...hero? Laugh, cry and applaud at full volume for the mind-bending adventures of Deadpool, exploring the psyche and crazed adventures of Marvel's most unstable personality!",2017-05-30T17:08:43-0400,1997,2002,,,1011334,8461
-2121,Fantastic Four (1961 - 1998),"Witness the comic masterpiece that gave birth to the Marvel Age! Mister Fantastic, The Thing, The Human Torch and The Invisible Girl unite to uncover the universe's greatest mysteries and face down would be world-conquerors like Doctor Doom, the Skrulls, Galactus and countless others!",2018-12-13T09:37:19-0500,1961,1998,,,1009148,12894
 421,Fantastic Four (1998 - 2012),"Space-faring visionaries exploring uncharted territory, the Fantastic Four were changed by cosmic rays into one of the world's greatest superteams. Now the world's greatest super-family, the FF continue to explore and lead humanity through their heroic deeds and bombastic imaginations. As one of the flagship Marvel titles, Fantastic Four is a comic every reader can enjoy.",2019-02-19T14:44:51-0500,1998,2012,T,ongoing,1009148,76808
+2121,Fantastic Four (1961 - 1998),"Witness the comic masterpiece that gave birth to the Marvel Age! Mister Fantastic, The Thing, The Human Torch and The Invisible Girl unite to uncover the universe's greatest mysteries and face down would be world-conquerors like Doctor Doom, the Skrulls, Galactus and countless others!",2018-12-13T09:37:19-0500,1961,1998,,,1009148,12894
 13691,Fear Itself (2010 - 2011),,2016-06-14T17:06:10-0400,2010,2011,,,1009148,39849
 13857,Fear Itself: Fellowship of Fear (2011),,2018-02-20T13:38:17-0500,2011,2011,,,1009148,38452
 13827,Fear Itself: The Worthy (2011),,2018-04-30T13:58:07-0400,2011,2011,,,1009148,38377
@@ -106,8 +106,8 @@ id,title,description,modified_date,start_year,end_year,rating,type,character_id,
 26673,Captain Marvel (2019 - Present),"Get ready to go futher, faster and farther with Captain Marvel! Learn all you need to know about former-pilot-turned-super-hero Carol Danvers and what are the essential comic stories of Captain Marvel! If you want the best of the best, start here!",2021-01-25T11:08:03-0500,2019,2099,,,1012717,73999
 2121,Fantastic Four (1961 - 1998),"Witness the comic masterpiece that gave birth to the Marvel Age! Mister Fantastic, The Thing, The Human Torch and The Invisible Girl unite to uncover the universe's greatest mysteries and face down would be world-conquerors like Doctor Doom, the Skrulls, Galactus and countless others!",2018-12-13T09:37:19-0500,1961,1998,,,1009148,12894
 1693,Marvel Masterworks: The Fantastic Four Vol.10 (2006),,-0001-11-30T00:00:00-0500,2006,2006,ALL AGES,collection,1012717,4203
-20854,Scarlet Witch (2015 - 2017),,2020-09-06T22:26:50-0400,2015,2017,Rated T+,ongoing,1012717,57094
 20338,Scarlet Witch (1994),,2016-09-08T10:07:57-0400,1994,1994,,limited,1012717,54974
+20854,Scarlet Witch (2015 - 2017),,2020-09-06T22:26:50-0400,2015,2017,Rated T+,ongoing,1012717,57094
 702,Ultimate Fantastic Four (2003 - 2009),"The Ultimate line takes classic Marvel characters and ideas and infuses them with new concepts and in radically fresh ways, without the ties to continuity.<br>
 Utlimate Fantastic Four focuses on the young geniuses of the FF as they come to grips with a wild world. Great reading for everyone from the newbie science geek to the veteran Marvel zombie.",2013-03-01T15:27:11-0500,2003,2009,A,,1012717,95
 3655,Vision and the Scarlet Witch (1985 - 1986),,2019-08-19T16:18:17-0400,1985,1986,,,1012717,18455
@@ -123,8 +123,8 @@ Utlimate Fantastic Four focuses on the young geniuses of the FF as they come to 
 1338,Cable & Deadpool Vol. 2: The Burnt Offering (2007),,-0001-11-30T00:00:00-0500,2007,2007,Not in Oracle,collection,1011031,5761
 34445,Life of Wolverine Infinity Comic (2022 - Present),,2021-12-06T12:21:54-0500,2022,2099,,,1009150,100343
 543,Weapon X (2002 - 2004),,-0001-11-30T00:00:00-0500,2002,2004,MARVEL PSR,,1009150,18071
-869,Weapon X: Days of Future Now (2005),,-0001-11-30T00:00:00-0500,2005,2005,T,,1009150,2204
 1478,Weapon X: Days of Future Now (2006),,-0001-11-30T00:00:00-0500,2006,2006,T+,collection,1009150,3357
+869,Weapon X: Days of Future Now (2005),,-0001-11-30T00:00:00-0500,2005,2005,T,,1009150,2204
 3649,Weapon X: The Draft – Agent Zero (2002),,2020-09-18T02:24:10-0400,2002,2002,,one shot,1009150,18408
 2262,Wolverine (1988 - 2003),"Breaking away from the X-Men, the man known as Logan pursues the most dangerous adventures he can find! See Wolverine clash with the pirates of Madripoor, the ninja hordes of Japan and the mutant-hunting Sentinels as well as grapple with his own past in this classic series!",2015-04-01T16:34:08-0400,1988,2003,,,1009148,14035
 84,WOLVERINE/DEADPOOL: WEAPON X TPB (1999),,-0001-11-30T00:00:00-0500,1999,1999,MARVEL PSR,collection,1009148,1023
