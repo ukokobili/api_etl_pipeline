@@ -10,3 +10,155 @@ sources:
       - name: comics
       - name: events
       - name: stories
+
+models:
+    - name: characters 
+      description: >
+        A list of Marvel Universe fictional characters which were created for and are owned by Marvel Comics.
+      columns:
+          - name: character_id
+            description: The unique ID of the character for this table extracted from Marvel API
+            tests:
+                - unique:
+                    severity: warn
+                - not_null:
+                    severity: warn
+          - name: name 
+            description: The name of the character.
+          - name: description 
+            description:  short bio or description of the character.
+          - name: modified_date 
+            description: The date the resource was most recently modified.
+        
+    - name: comics 
+      description: >
+        An American comic book publisher and primary imprint of Marvel Worldwide Inc. 
+        (formerly Marvel Publishing, Inc. and Marvel Comics Group), part of Marvel Entertainment.
+      columns:
+          - name: comics_id
+            description: The unique ID of the comic for this table extracted from Marvel API
+            tests:
+              - not_null:
+                  severity: warn
+          - name: title 
+            description: The canonical title of the comic.
+          - name: description 
+            description:  short bio or description of the comic.
+          - name: modified_date 
+            description: The date the resource was most recently modified.
+          - name: number_of_pages 
+            description:  The number of story pages in the comic.
+          - name: print_price 
+            description: A list of prices for this comic.
+          - name: digital_purchase_price 
+            description: A list of digital purchase prices for this comic.
+          - name: character_id 
+            description: The Foreign ID of the character for this table extracted from Marvel API.
+            tests:
+              - relationships:
+                  to: ref('characters')
+                  field: character_id 
+                  severity: warn
+
+    - name: creators 
+      description: >
+        A resource list containing the creators associated with Marvel Comics.
+      columns:
+          - name: creators_id
+            description: The unique ID of the comic for this table extracted from Marvel API
+            tests:
+                - not_null:
+                    severity: warn
+          - name: creators_name 
+            description: The full name of the creator.
+          - name: creators_role 
+            description:  The role of the creator.
+          - name: character_id
+            description: The Foreign ID of the character for this table extracted from Marvel API.
+            tests:
+              - relationships:
+                  to: ref('characters')
+                  field: character_id 
+                  severity: warn
+                
+    - name: events 
+      description: >
+        A list of Marvel's events.
+      columns:
+          - name: events_id
+            description: The unique ID of the comic for this table extracted from Marvel API
+            tests:
+                - not_null:
+                    severity: warn
+          - name: title 
+            description: The title of the event.
+          - name: description 
+            description:  short bio or description of the event.
+          - name: start_date 
+            description: The date of publication of the first issue in this event.
+          - name: end_date 
+            description: The date of publication of the last issue in this event.
+          - name: character_id 
+            description: The Foreign ID of the character for this table extracted from Marvel API.
+            tests:
+              - relationships:
+                  to: ref('characters')
+                  field: character_id 
+                  severity: warn
+
+    - name: series_table 
+      description: >
+        A List of television series based on Marvel Comics publications.
+      columns:
+          - name: series_id
+            description: The unique ID of the comic for this table extracted from Marvel API
+            tests:
+                - not_null:
+                    severity: warn
+          - name: title 
+            description: The title of the series.
+          - name: description 
+            description:  short bio or description of the series.
+          - name: start_year 
+            description: The first year of publication for the series.
+          - name: end_year
+            description: The last year of publication for the series (conventionally, 2099 for ongoing series).
+          - name: rating
+            description: The age-appropriateness rating for the series.
+          - name: type
+            description: The type of series.
+          - name: character_id 
+            description: The Foreign ID of the character for this table extracted from Marvel API.
+            tests:
+              - relationships:
+                  to: ref('characters')
+                  field: character_id 
+                  severity: warn
+
+    - name: stories 
+      description: >
+        A List of The canonical stories.
+      columns:
+          - name: stories_id
+            description: The unique ID of the comic for this table extracted from Marvel API
+            tests:
+                - unique:
+                    severity: warn
+                - not_null:
+                    severity: warn
+          - name: title 
+            description: The title of the stories.
+          - name: description 
+            description:  short bio or description of the stories.
+          - name: modified_date
+            description: The date the resource was most recently modified.
+          - name: type
+            description: The story type e.g. interior story, cover, text story.
+          - name: character_id 
+            description: The Foreign ID of the character for this table extracted from Marvel API.
+            tests:
+              - relationships:
+                  to: ref('characters')
+                  field: character_id 
+                  severity: warn 
+                  

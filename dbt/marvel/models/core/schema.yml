@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: characters_dim
+    description: >
+      List of unique characters and comics. 
+    columns:
+      - name: number_of_comics
+        description: Total number of comics that a character featured in.
+        tests:
+            - not_null:
+                severity: error
+
+  - name: character_fact
+    description: >
+      Contains both character and comic data.
+      
+  
