@@ -4,10 +4,15 @@ import requests as rq
 import pprint as pp
 import pandas as pd
 import hashlib # working of MD5 (byte - byte)
+import psycopg2
+from sqlalchemy import create_engine
 
+# declare API credentials
 api_key = '588b45a229442c116e0361f021e60cc8'
 private_key = 'c42a86afb87c38979b3fe3b03827394b5887a479'
 ts = '1000'
+
+
 
 # encode the api keys 
 # https://www.pythonpool.com/python-md5/
@@ -181,5 +186,31 @@ def get_series():
             series_list.append(series_)              
     return pd.DataFrame(series_list)
 
-df = get_series()
-df.to_csv('series.csv', index=False)
+################################################################################################################
+
+# define database connect function
+def connect_db():
+    print('Connecting to Marvel Database...')
+
+    # login to marvel_db database
+    conn = create_engine(f'postgresql://root:root@localhost:5432/marvel_db')
+    # check connection if successful
+    conn.connect()
+    return conn
+
+################################################################################################################## 
+
+def run_etl():
+    conn = connect_db()
+    # save characters table to marvel_db
+    get_character().to_sql(name='characters', con=conn, index=False, if_exists='replace')
+    # save comics table to marvel_db
+    get_comics().to_sql(name='comics', con=conn, index=False, if_exists='replace')
+    # save events table to marvel_db
+    get_events().to_sql(name='events', con=conn, index=False, if_exists='replace')
+    # save series table to marvel_db
+    get_series().to_sql(name='series', con=conn, index=False, if_exists='replace')
+    # save stories table to marvel_db
+    get_stories().to_sql(name='stories', con=conn, index=False, if_exists='replace')
+
+run_etl()
