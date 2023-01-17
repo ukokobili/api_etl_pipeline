@@ -9,16 +9,23 @@ services:
       - marvel_data:/var/lib/postgresql/data
     ports:
       - "5432:5432"
-  pgmarvel:
-    image: dpage/pgadmin4
-    environment:
-      - PGADMIN_DEFAULT_EMAIL=admin@admin.com
-      - PGADMIN_DEFAULT_PASSWORD=admin
-    volumes:
-      - data_store:/var/lib/pgadmin
-    ports:
-      - "8080:80"
+    networks:
+      - airflow
+  # pgmarvel:
+  #   image: dpage/pgadmin4
+  #   environment:
+  #     - PGADMIN_DEFAULT_EMAIL=admin@admin.com
+  #     - PGADMIN_DEFAULT_PASSWORD=admin
+  #   volumes:
+  #     - data_store:/var/lib/pgadmin
+  #   ports:
+  #     - "8080:80"
 
 volumes:
   marvel_data:
-  data_store:
+  # data_store:
+
+networks:
+  airflow:
+    external:
+      name: airflow_default

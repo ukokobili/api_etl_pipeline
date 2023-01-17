@@ -1,0 +1,1544 @@
+[2022-11-14 06:05:56,143] {processor.py:163} INFO - Started process (PID=1497) to work on /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:05:56,195] {processor.py:642} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2022-11-14 06:05:56,196] {logging_mixin.py:109} INFO - [2022-11-14 06:05:56,196] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:05:59,949] {logging_mixin.py:109} INFO - Connecting to Marvel Database...
+[2022-11-14 06:06:26,232] {logging_mixin.py:109} INFO - [2022-11-14 06:06:26,231] {timeout.py:36} ERROR - Process timed out, PID: 1497
+[2022-11-14 06:06:26,264] {logging_mixin.py:109} INFO - [2022-11-14 06:06:26,232] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/etl_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/etl_dag.py", line 4, in <module>
+    from etl import run_etl
+  File "/opt/airflow/dags/etl.py", line 216, in <module>
+    run_etl()
+  File "/opt/airflow/dags/etl.py", line 208, in run_etl
+    get_comics().to_sql(name='comics', con=conn, index=False, if_exists='replace')
+  File "/opt/airflow/dags/etl.py", line 74, in get_comics
+    r = rq.get(f'{baseurl}{endpoint}/{a}{comics_}?ts={ts}&apikey={api_key}&hash={hash_key}')
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/sessions.py", line 533, in request
+    prep.url, proxies, stream, verify, cert
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/sessions.py", line 711, in merge_environment_settings
+    env_proxies = get_environ_proxies(url, no_proxy=no_proxy)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/utils.py", line 797, in get_environ_proxies
+    if should_bypass_proxies(url, no_proxy=no_proxy):
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/utils.py", line 781, in should_bypass_proxies
+    bypass = proxy_bypass(parsed.hostname)
+  File "/usr/local/lib/python3.7/urllib/request.py", line 2528, in proxy_bypass_environment
+    proxies = getproxies_environment()
+  File "/usr/local/lib/python3.7/urllib/request.py", line 2512, in getproxies_environment
+    if name[-6:] == '_proxy':
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/timeout.py", line 37, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/etl_dag.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.2.3/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.2.3/best-practices.html#reducing-dag-complexity, PID: 1497
+[2022-11-14 06:06:26,418] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:06:26,538] {processor.py:171} INFO - Processing /opt/airflow/dags/etl_dag.py took 30.515 seconds
+[2022-11-14 06:06:56,786] {processor.py:163} INFO - Started process (PID=1533) to work on /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:06:56,789] {processor.py:642} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2022-11-14 06:06:56,789] {logging_mixin.py:109} INFO - [2022-11-14 06:06:56,789] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:06:57,420] {logging_mixin.py:109} INFO - Connecting to Marvel Database...
+[2022-11-14 06:07:26,776] {logging_mixin.py:109} INFO - [2022-11-14 06:07:26,776] {timeout.py:36} ERROR - Process timed out, PID: 1533
+[2022-11-14 06:07:26,780] {logging_mixin.py:109} INFO - [2022-11-14 06:07:26,777] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/etl_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/etl_dag.py", line 4, in <module>
+    from etl import run_etl
+  File "/opt/airflow/dags/etl.py", line 216, in <module>
+    run_etl()
+  File "/opt/airflow/dags/etl.py", line 208, in run_etl
+    get_comics().to_sql(name='comics', con=conn, index=False, if_exists='replace')
+  File "/opt/airflow/dags/etl.py", line 74, in get_comics
+    r = rq.get(f'{baseurl}{endpoint}/{a}{comics_}?ts={ts}&apikey={api_key}&hash={hash_key}')
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 706, in urlopen
+    chunked=chunked,
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 445, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 440, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/local/lib/python3.7/http/client.py", line 1373, in getresponse
+    response.begin()
+  File "/usr/local/lib/python3.7/http/client.py", line 319, in begin
+    version, status, reason = self._read_status()
+  File "/usr/local/lib/python3.7/http/client.py", line 280, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/local/lib/python3.7/socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/timeout.py", line 37, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/etl_dag.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.2.3/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.2.3/best-practices.html#reducing-dag-complexity, PID: 1533
+[2022-11-14 06:07:26,802] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:07:26,822] {processor.py:171} INFO - Processing /opt/airflow/dags/etl_dag.py took 30.056 seconds
+[2022-11-14 06:07:56,923] {processor.py:163} INFO - Started process (PID=1579) to work on /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:07:56,925] {processor.py:642} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2022-11-14 06:07:56,926] {logging_mixin.py:109} INFO - [2022-11-14 06:07:56,926] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:07:57,380] {logging_mixin.py:109} INFO - Connecting to Marvel Database...
+[2022-11-14 06:08:26,927] {logging_mixin.py:109} INFO - [2022-11-14 06:08:26,927] {timeout.py:36} ERROR - Process timed out, PID: 1579
+[2022-11-14 06:08:26,931] {logging_mixin.py:109} INFO - [2022-11-14 06:08:26,928] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/etl_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/etl_dag.py", line 4, in <module>
+    from etl import run_etl
+  File "/opt/airflow/dags/etl.py", line 216, in <module>
+    run_etl()
+  File "/opt/airflow/dags/etl.py", line 208, in run_etl
+    get_comics().to_sql(name='comics', con=conn, index=False, if_exists='replace')
+  File "/opt/airflow/dags/etl.py", line 74, in get_comics
+    r = rq.get(f'{baseurl}{endpoint}/{a}{comics_}?ts={ts}&apikey={api_key}&hash={hash_key}')
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 706, in urlopen
+    chunked=chunked,
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 445, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 440, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/local/lib/python3.7/http/client.py", line 1373, in getresponse
+    response.begin()
+  File "/usr/local/lib/python3.7/http/client.py", line 319, in begin
+    version, status, reason = self._read_status()
+  File "/usr/local/lib/python3.7/http/client.py", line 280, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/local/lib/python3.7/socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/timeout.py", line 37, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/etl_dag.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.2.3/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.2.3/best-practices.html#reducing-dag-complexity, PID: 1579
+[2022-11-14 06:08:26,949] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:08:26,975] {processor.py:171} INFO - Processing /opt/airflow/dags/etl_dag.py took 30.056 seconds
+[2022-11-14 06:08:57,114] {processor.py:163} INFO - Started process (PID=1635) to work on /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:08:57,115] {processor.py:642} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2022-11-14 06:08:57,116] {logging_mixin.py:109} INFO - [2022-11-14 06:08:57,116] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:08:57,715] {logging_mixin.py:109} INFO - Connecting to Marvel Database...
+[2022-11-14 06:09:27,117] {logging_mixin.py:109} INFO - [2022-11-14 06:09:27,117] {timeout.py:36} ERROR - Process timed out, PID: 1635
+[2022-11-14 06:09:27,120] {logging_mixin.py:109} INFO - [2022-11-14 06:09:27,118] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/etl_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/etl_dag.py", line 4, in <module>
+    from etl import run_etl
+  File "/opt/airflow/dags/etl.py", line 216, in <module>
+    run_etl()
+  File "/opt/airflow/dags/etl.py", line 210, in run_etl
+    get_events().to_sql(name='events', con=conn, index=False, if_exists='replace')
+  File "/opt/airflow/dags/etl.py", line 103, in get_events
+    r = rq.get(f'{baseurl}{endpoint}/{a}{events_}?ts={ts}&apikey={api_key}&hash={hash_key}')
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 706, in urlopen
+    chunked=chunked,
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 394, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connection.py", line 239, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "/usr/local/lib/python3.7/http/client.py", line 1281, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/local/lib/python3.7/http/client.py", line 1327, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.7/http/client.py", line 1276, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.7/http/client.py", line 1036, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.7/http/client.py", line 976, in send
+    self.connect()
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connection.py", line 175, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/util/connection.py", line 86, in create_connection
+    sock.connect(sa)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/timeout.py", line 37, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/etl_dag.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.2.3/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.2.3/best-practices.html#reducing-dag-complexity, PID: 1635
+[2022-11-14 06:09:27,141] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:09:27,157] {processor.py:171} INFO - Processing /opt/airflow/dags/etl_dag.py took 30.046 seconds
+[2022-11-14 06:09:57,319] {processor.py:163} INFO - Started process (PID=1672) to work on /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:09:57,336] {processor.py:642} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2022-11-14 06:09:57,337] {logging_mixin.py:109} INFO - [2022-11-14 06:09:57,337] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:09:59,038] {logging_mixin.py:109} INFO - Connecting to Marvel Database...
+[2022-11-14 06:10:27,347] {logging_mixin.py:109} INFO - [2022-11-14 06:10:27,346] {timeout.py:36} ERROR - Process timed out, PID: 1672
+[2022-11-14 06:10:27,350] {logging_mixin.py:109} INFO - [2022-11-14 06:10:27,347] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/etl_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/etl_dag.py", line 4, in <module>
+    from etl import run_etl
+  File "/opt/airflow/dags/etl.py", line 216, in <module>
+    run_etl()
+  File "/opt/airflow/dags/etl.py", line 210, in run_etl
+    get_events().to_sql(name='events', con=conn, index=False, if_exists='replace')
+  File "/opt/airflow/dags/etl.py", line 103, in get_events
+    r = rq.get(f'{baseurl}{endpoint}/{a}{events_}?ts={ts}&apikey={api_key}&hash={hash_key}')
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 706, in urlopen
+    chunked=chunked,
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 394, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connection.py", line 239, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "/usr/local/lib/python3.7/http/client.py", line 1281, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/local/lib/python3.7/http/client.py", line 1327, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.7/http/client.py", line 1276, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.7/http/client.py", line 1036, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.7/http/client.py", line 976, in send
+    self.connect()
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connection.py", line 175, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/util/connection.py", line 86, in create_connection
+    sock.connect(sa)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/timeout.py", line 37, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/etl_dag.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.2.3/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.2.3/best-practices.html#reducing-dag-complexity, PID: 1672
+[2022-11-14 06:10:27,373] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:10:27,409] {processor.py:171} INFO - Processing /opt/airflow/dags/etl_dag.py took 30.098 seconds
+[2022-11-14 06:10:57,540] {processor.py:163} INFO - Started process (PID=1717) to work on /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:10:57,548] {processor.py:642} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2022-11-14 06:10:57,550] {logging_mixin.py:109} INFO - [2022-11-14 06:10:57,550] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:10:58,259] {logging_mixin.py:109} INFO - Connecting to Marvel Database...
+[2022-11-14 06:11:27,554] {logging_mixin.py:109} INFO - [2022-11-14 06:11:27,554] {timeout.py:36} ERROR - Process timed out, PID: 1717
+[2022-11-14 06:11:27,558] {logging_mixin.py:109} INFO - [2022-11-14 06:11:27,555] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/etl_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/etl_dag.py", line 4, in <module>
+    from etl import run_etl
+  File "/opt/airflow/dags/etl.py", line 216, in <module>
+    run_etl()
+  File "/opt/airflow/dags/etl.py", line 210, in run_etl
+    get_events().to_sql(name='events', con=conn, index=False, if_exists='replace')
+  File "/opt/airflow/dags/etl.py", line 103, in get_events
+    r = rq.get(f'{baseurl}{endpoint}/{a}{events_}?ts={ts}&apikey={api_key}&hash={hash_key}')
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 706, in urlopen
+    chunked=chunked,
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 394, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connection.py", line 239, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "/usr/local/lib/python3.7/http/client.py", line 1281, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/local/lib/python3.7/http/client.py", line 1327, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.7/http/client.py", line 1276, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.7/http/client.py", line 1036, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.7/http/client.py", line 976, in send
+    self.connect()
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connection.py", line 175, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/util/connection.py", line 86, in create_connection
+    sock.connect(sa)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/timeout.py", line 37, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/etl_dag.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.2.3/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.2.3/best-practices.html#reducing-dag-complexity, PID: 1717
+[2022-11-14 06:11:27,580] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:11:27,606] {processor.py:171} INFO - Processing /opt/airflow/dags/etl_dag.py took 30.075 seconds
+[2022-11-14 06:11:57,720] {processor.py:163} INFO - Started process (PID=1763) to work on /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:11:57,725] {processor.py:642} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2022-11-14 06:11:57,726] {logging_mixin.py:109} INFO - [2022-11-14 06:11:57,726] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:11:58,240] {logging_mixin.py:109} INFO - Connecting to Marvel Database...
+[2022-11-14 06:12:27,742] {logging_mixin.py:109} INFO - [2022-11-14 06:12:27,742] {timeout.py:36} ERROR - Process timed out, PID: 1763
+[2022-11-14 06:12:27,746] {logging_mixin.py:109} INFO - [2022-11-14 06:12:27,743] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/etl_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/etl_dag.py", line 4, in <module>
+    from etl import run_etl
+  File "/opt/airflow/dags/etl.py", line 216, in <module>
+    run_etl()
+  File "/opt/airflow/dags/etl.py", line 210, in run_etl
+    get_events().to_sql(name='events', con=conn, index=False, if_exists='replace')
+  File "/opt/airflow/dags/etl.py", line 103, in get_events
+    r = rq.get(f'{baseurl}{endpoint}/{a}{events_}?ts={ts}&apikey={api_key}&hash={hash_key}')
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 706, in urlopen
+    chunked=chunked,
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 445, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 440, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/local/lib/python3.7/http/client.py", line 1373, in getresponse
+    response.begin()
+  File "/usr/local/lib/python3.7/http/client.py", line 319, in begin
+    version, status, reason = self._read_status()
+  File "/usr/local/lib/python3.7/http/client.py", line 280, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/local/lib/python3.7/socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/timeout.py", line 37, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/etl_dag.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.2.3/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.2.3/best-practices.html#reducing-dag-complexity, PID: 1763
+[2022-11-14 06:12:27,790] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:12:27,812] {processor.py:171} INFO - Processing /opt/airflow/dags/etl_dag.py took 30.095 seconds
+[2022-11-14 06:12:57,869] {processor.py:163} INFO - Started process (PID=1820) to work on /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:12:57,872] {processor.py:642} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2022-11-14 06:12:57,874] {logging_mixin.py:109} INFO - [2022-11-14 06:12:57,873] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:12:58,485] {logging_mixin.py:109} INFO - Connecting to Marvel Database...
+[2022-11-14 06:13:27,875] {logging_mixin.py:109} INFO - [2022-11-14 06:13:27,875] {timeout.py:36} ERROR - Process timed out, PID: 1820
+[2022-11-14 06:13:27,882] {logging_mixin.py:109} INFO - [2022-11-14 06:13:27,876] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/etl_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/etl_dag.py", line 4, in <module>
+    from etl import run_etl
+  File "/opt/airflow/dags/etl.py", line 216, in <module>
+    run_etl()
+  File "/opt/airflow/dags/etl.py", line 210, in run_etl
+    get_events().to_sql(name='events', con=conn, index=False, if_exists='replace')
+  File "/opt/airflow/dags/etl.py", line 103, in get_events
+    r = rq.get(f'{baseurl}{endpoint}/{a}{events_}?ts={ts}&apikey={api_key}&hash={hash_key}')
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 706, in urlopen
+    chunked=chunked,
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 445, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 440, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/local/lib/python3.7/http/client.py", line 1373, in getresponse
+    response.begin()
+  File "/usr/local/lib/python3.7/http/client.py", line 319, in begin
+    version, status, reason = self._read_status()
+  File "/usr/local/lib/python3.7/http/client.py", line 280, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/local/lib/python3.7/socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/timeout.py", line 37, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/etl_dag.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.2.3/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.2.3/best-practices.html#reducing-dag-complexity, PID: 1820
+[2022-11-14 06:13:27,901] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:13:27,974] {processor.py:171} INFO - Processing /opt/airflow/dags/etl_dag.py took 30.112 seconds
+[2022-11-14 06:13:58,121] {processor.py:163} INFO - Started process (PID=1866) to work on /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:13:58,124] {processor.py:642} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2022-11-14 06:13:58,126] {logging_mixin.py:109} INFO - [2022-11-14 06:13:58,126] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:13:59,326] {logging_mixin.py:109} INFO - Connecting to Marvel Database...
+[2022-11-14 06:14:28,128] {logging_mixin.py:109} INFO - [2022-11-14 06:14:28,128] {timeout.py:36} ERROR - Process timed out, PID: 1866
+[2022-11-14 06:14:28,132] {logging_mixin.py:109} INFO - [2022-11-14 06:14:28,129] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/etl_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/etl_dag.py", line 4, in <module>
+    from etl import run_etl
+  File "/opt/airflow/dags/etl.py", line 216, in <module>
+    run_etl()
+  File "/opt/airflow/dags/etl.py", line 210, in run_etl
+    get_events().to_sql(name='events', con=conn, index=False, if_exists='replace')
+  File "/opt/airflow/dags/etl.py", line 103, in get_events
+    r = rq.get(f'{baseurl}{endpoint}/{a}{events_}?ts={ts}&apikey={api_key}&hash={hash_key}')
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 706, in urlopen
+    chunked=chunked,
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 445, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 440, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/local/lib/python3.7/http/client.py", line 1373, in getresponse
+    response.begin()
+  File "/usr/local/lib/python3.7/http/client.py", line 319, in begin
+    version, status, reason = self._read_status()
+  File "/usr/local/lib/python3.7/http/client.py", line 280, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/local/lib/python3.7/socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/timeout.py", line 37, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/etl_dag.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.2.3/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.2.3/best-practices.html#reducing-dag-complexity, PID: 1866
+[2022-11-14 06:14:28,148] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:14:28,162] {processor.py:171} INFO - Processing /opt/airflow/dags/etl_dag.py took 30.048 seconds
+[2022-11-14 06:14:58,309] {processor.py:163} INFO - Started process (PID=1911) to work on /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:14:58,316] {processor.py:642} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2022-11-14 06:14:58,317] {logging_mixin.py:109} INFO - [2022-11-14 06:14:58,317] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:14:58,951] {logging_mixin.py:109} INFO - Connecting to Marvel Database...
+[2022-11-14 06:15:28,319] {logging_mixin.py:109} INFO - [2022-11-14 06:15:28,319] {timeout.py:36} ERROR - Process timed out, PID: 1911
+[2022-11-14 06:15:28,323] {logging_mixin.py:109} INFO - [2022-11-14 06:15:28,320] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/etl_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/etl_dag.py", line 4, in <module>
+    from etl import run_etl
+  File "/opt/airflow/dags/etl.py", line 216, in <module>
+    run_etl()
+  File "/opt/airflow/dags/etl.py", line 210, in run_etl
+    get_events().to_sql(name='events', con=conn, index=False, if_exists='replace')
+  File "/opt/airflow/dags/etl.py", line 103, in get_events
+    r = rq.get(f'{baseurl}{endpoint}/{a}{events_}?ts={ts}&apikey={api_key}&hash={hash_key}')
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 706, in urlopen
+    chunked=chunked,
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 445, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 440, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/local/lib/python3.7/http/client.py", line 1373, in getresponse
+    response.begin()
+  File "/usr/local/lib/python3.7/http/client.py", line 319, in begin
+    version, status, reason = self._read_status()
+  File "/usr/local/lib/python3.7/http/client.py", line 280, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/local/lib/python3.7/socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/timeout.py", line 37, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/etl_dag.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.2.3/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.2.3/best-practices.html#reducing-dag-complexity, PID: 1911
+[2022-11-14 06:15:28,341] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:15:28,367] {processor.py:171} INFO - Processing /opt/airflow/dags/etl_dag.py took 30.063 seconds
+[2022-11-14 06:15:58,570] {processor.py:163} INFO - Started process (PID=1965) to work on /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:15:58,573] {processor.py:642} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2022-11-14 06:15:58,574] {logging_mixin.py:109} INFO - [2022-11-14 06:15:58,574] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:16:00,101] {logging_mixin.py:109} INFO - Connecting to Marvel Database...
+[2022-11-14 06:16:28,578] {logging_mixin.py:109} INFO - [2022-11-14 06:16:28,578] {timeout.py:36} ERROR - Process timed out, PID: 1965
+[2022-11-14 06:16:28,587] {logging_mixin.py:109} INFO - [2022-11-14 06:16:28,579] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/etl_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/etl_dag.py", line 4, in <module>
+    from etl import run_etl
+  File "/opt/airflow/dags/etl.py", line 216, in <module>
+    run_etl()
+  File "/opt/airflow/dags/etl.py", line 208, in run_etl
+    get_comics().to_sql(name='comics', con=conn, index=False, if_exists='replace')
+  File "/opt/airflow/dags/etl.py", line 74, in get_comics
+    r = rq.get(f'{baseurl}{endpoint}/{a}{comics_}?ts={ts}&apikey={api_key}&hash={hash_key}')
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 706, in urlopen
+    chunked=chunked,
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 394, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connection.py", line 239, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "/usr/local/lib/python3.7/http/client.py", line 1281, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/local/lib/python3.7/http/client.py", line 1327, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.7/http/client.py", line 1276, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.7/http/client.py", line 1036, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.7/http/client.py", line 976, in send
+    self.connect()
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connection.py", line 175, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/util/connection.py", line 86, in create_connection
+    sock.connect(sa)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/timeout.py", line 37, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/etl_dag.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.2.3/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.2.3/best-practices.html#reducing-dag-complexity, PID: 1965
+[2022-11-14 06:16:28,612] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:16:28,628] {processor.py:171} INFO - Processing /opt/airflow/dags/etl_dag.py took 30.066 seconds
+[2022-11-14 06:16:58,753] {processor.py:163} INFO - Started process (PID=2010) to work on /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:16:58,756] {processor.py:642} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2022-11-14 06:16:58,757] {logging_mixin.py:109} INFO - [2022-11-14 06:16:58,757] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:16:59,519] {logging_mixin.py:109} INFO - Connecting to Marvel Database...
+[2022-11-14 06:17:28,759] {logging_mixin.py:109} INFO - [2022-11-14 06:17:28,758] {timeout.py:36} ERROR - Process timed out, PID: 2010
+[2022-11-14 06:17:28,762] {logging_mixin.py:109} INFO - [2022-11-14 06:17:28,759] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/etl_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/etl_dag.py", line 4, in <module>
+    from etl import run_etl
+  File "/opt/airflow/dags/etl.py", line 216, in <module>
+    run_etl()
+  File "/opt/airflow/dags/etl.py", line 210, in run_etl
+    get_events().to_sql(name='events', con=conn, index=False, if_exists='replace')
+  File "/opt/airflow/dags/etl.py", line 103, in get_events
+    r = rq.get(f'{baseurl}{endpoint}/{a}{events_}?ts={ts}&apikey={api_key}&hash={hash_key}')
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 706, in urlopen
+    chunked=chunked,
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 445, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 440, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/local/lib/python3.7/http/client.py", line 1373, in getresponse
+    response.begin()
+  File "/usr/local/lib/python3.7/http/client.py", line 319, in begin
+    version, status, reason = self._read_status()
+  File "/usr/local/lib/python3.7/http/client.py", line 280, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/local/lib/python3.7/socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/timeout.py", line 37, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/etl_dag.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.2.3/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.2.3/best-practices.html#reducing-dag-complexity, PID: 2010
+[2022-11-14 06:17:28,784] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:17:28,798] {processor.py:171} INFO - Processing /opt/airflow/dags/etl_dag.py took 30.049 seconds
+[2022-11-14 06:17:58,943] {processor.py:163} INFO - Started process (PID=2055) to work on /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:17:58,951] {processor.py:642} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2022-11-14 06:17:58,952] {logging_mixin.py:109} INFO - [2022-11-14 06:17:58,952] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:17:59,499] {logging_mixin.py:109} INFO - Connecting to Marvel Database...
+[2022-11-14 06:18:28,953] {logging_mixin.py:109} INFO - [2022-11-14 06:18:28,953] {timeout.py:36} ERROR - Process timed out, PID: 2055
+[2022-11-14 06:18:28,955] {logging_mixin.py:109} INFO - [2022-11-14 06:18:28,954] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/etl_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/etl_dag.py", line 4, in <module>
+    from etl import run_etl
+  File "/opt/airflow/dags/etl.py", line 216, in <module>
+    run_etl()
+  File "/opt/airflow/dags/etl.py", line 210, in run_etl
+    get_events().to_sql(name='events', con=conn, index=False, if_exists='replace')
+  File "/opt/airflow/dags/etl.py", line 103, in get_events
+    r = rq.get(f'{baseurl}{endpoint}/{a}{events_}?ts={ts}&apikey={api_key}&hash={hash_key}')
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 706, in urlopen
+    chunked=chunked,
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 394, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connection.py", line 239, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "/usr/local/lib/python3.7/http/client.py", line 1281, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/local/lib/python3.7/http/client.py", line 1327, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.7/http/client.py", line 1276, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.7/http/client.py", line 1036, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.7/http/client.py", line 976, in send
+    self.connect()
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connection.py", line 175, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/util/connection.py", line 86, in create_connection
+    sock.connect(sa)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/timeout.py", line 37, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/etl_dag.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.2.3/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.2.3/best-practices.html#reducing-dag-complexity, PID: 2055
+[2022-11-14 06:18:28,976] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:18:28,998] {processor.py:171} INFO - Processing /opt/airflow/dags/etl_dag.py took 30.059 seconds
+[2022-11-14 06:18:59,101] {processor.py:163} INFO - Started process (PID=2108) to work on /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:18:59,103] {processor.py:642} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2022-11-14 06:18:59,104] {logging_mixin.py:109} INFO - [2022-11-14 06:18:59,104] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:18:59,807] {logging_mixin.py:109} INFO - Connecting to Marvel Database...
+[2022-11-14 06:19:29,107] {logging_mixin.py:109} INFO - [2022-11-14 06:19:29,105] {timeout.py:36} ERROR - Process timed out, PID: 2108
+[2022-11-14 06:19:29,111] {logging_mixin.py:109} INFO - [2022-11-14 06:19:29,108] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/etl_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/etl_dag.py", line 4, in <module>
+    from etl import run_etl
+  File "/opt/airflow/dags/etl.py", line 216, in <module>
+    run_etl()
+  File "/opt/airflow/dags/etl.py", line 210, in run_etl
+    get_events().to_sql(name='events', con=conn, index=False, if_exists='replace')
+  File "/opt/airflow/dags/etl.py", line 103, in get_events
+    r = rq.get(f'{baseurl}{endpoint}/{a}{events_}?ts={ts}&apikey={api_key}&hash={hash_key}')
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 706, in urlopen
+    chunked=chunked,
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 394, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connection.py", line 239, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "/usr/local/lib/python3.7/http/client.py", line 1281, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/local/lib/python3.7/http/client.py", line 1327, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.7/http/client.py", line 1276, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.7/http/client.py", line 1036, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.7/http/client.py", line 976, in send
+    self.connect()
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connection.py", line 175, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/util/connection.py", line 86, in create_connection
+    sock.connect(sa)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/timeout.py", line 37, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/etl_dag.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.2.3/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.2.3/best-practices.html#reducing-dag-complexity, PID: 2108
+[2022-11-14 06:19:29,133] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:19:29,145] {processor.py:171} INFO - Processing /opt/airflow/dags/etl_dag.py took 30.047 seconds
+[2022-11-14 06:19:59,261] {processor.py:163} INFO - Started process (PID=2155) to work on /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:19:59,263] {processor.py:642} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2022-11-14 06:19:59,264] {logging_mixin.py:109} INFO - [2022-11-14 06:19:59,264] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:19:59,893] {logging_mixin.py:109} INFO - Connecting to Marvel Database...
+[2022-11-14 06:20:29,275] {logging_mixin.py:109} INFO - [2022-11-14 06:20:29,275] {timeout.py:36} ERROR - Process timed out, PID: 2155
+[2022-11-14 06:20:29,279] {logging_mixin.py:109} INFO - [2022-11-14 06:20:29,276] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/etl_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/etl_dag.py", line 4, in <module>
+    from etl import run_etl
+  File "/opt/airflow/dags/etl.py", line 216, in <module>
+    run_etl()
+  File "/opt/airflow/dags/etl.py", line 210, in run_etl
+    get_events().to_sql(name='events', con=conn, index=False, if_exists='replace')
+  File "/opt/airflow/dags/etl.py", line 103, in get_events
+    r = rq.get(f'{baseurl}{endpoint}/{a}{events_}?ts={ts}&apikey={api_key}&hash={hash_key}')
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 706, in urlopen
+    chunked=chunked,
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 394, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connection.py", line 239, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "/usr/local/lib/python3.7/http/client.py", line 1281, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/local/lib/python3.7/http/client.py", line 1327, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.7/http/client.py", line 1276, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.7/http/client.py", line 1036, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.7/http/client.py", line 976, in send
+    self.connect()
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connection.py", line 175, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/local/lib/python3.7/socket.py", line 752, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/timeout.py", line 37, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/etl_dag.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.2.3/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.2.3/best-practices.html#reducing-dag-complexity, PID: 2155
+[2022-11-14 06:20:29,294] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:20:29,321] {processor.py:171} INFO - Processing /opt/airflow/dags/etl_dag.py took 30.066 seconds
+[2022-11-14 06:20:59,468] {processor.py:163} INFO - Started process (PID=2210) to work on /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:20:59,471] {processor.py:642} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2022-11-14 06:20:59,472] {logging_mixin.py:109} INFO - [2022-11-14 06:20:59,472] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:21:00,395] {logging_mixin.py:109} INFO - Connecting to Marvel Database...
+[2022-11-14 06:21:29,474] {logging_mixin.py:109} INFO - [2022-11-14 06:21:29,473] {timeout.py:36} ERROR - Process timed out, PID: 2210
+[2022-11-14 06:21:29,477] {logging_mixin.py:109} INFO - [2022-11-14 06:21:29,474] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/etl_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/etl_dag.py", line 4, in <module>
+    from etl import run_etl
+  File "/opt/airflow/dags/etl.py", line 216, in <module>
+    run_etl()
+  File "/opt/airflow/dags/etl.py", line 210, in run_etl
+    get_events().to_sql(name='events', con=conn, index=False, if_exists='replace')
+  File "/opt/airflow/dags/etl.py", line 103, in get_events
+    r = rq.get(f'{baseurl}{endpoint}/{a}{events_}?ts={ts}&apikey={api_key}&hash={hash_key}')
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 706, in urlopen
+    chunked=chunked,
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 445, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 440, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/local/lib/python3.7/http/client.py", line 1373, in getresponse
+    response.begin()
+  File "/usr/local/lib/python3.7/http/client.py", line 319, in begin
+    version, status, reason = self._read_status()
+  File "/usr/local/lib/python3.7/http/client.py", line 280, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/local/lib/python3.7/socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/timeout.py", line 37, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/etl_dag.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.2.3/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.2.3/best-practices.html#reducing-dag-complexity, PID: 2210
+[2022-11-14 06:21:29,494] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:21:29,508] {processor.py:171} INFO - Processing /opt/airflow/dags/etl_dag.py took 30.047 seconds
+[2022-11-14 06:21:59,609] {processor.py:163} INFO - Started process (PID=2257) to work on /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:21:59,610] {processor.py:642} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2022-11-14 06:21:59,611] {logging_mixin.py:109} INFO - [2022-11-14 06:21:59,611] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:22:00,285] {logging_mixin.py:109} INFO - Connecting to Marvel Database...
+[2022-11-14 06:22:29,612] {logging_mixin.py:109} INFO - [2022-11-14 06:22:29,612] {timeout.py:36} ERROR - Process timed out, PID: 2257
+[2022-11-14 06:22:29,615] {logging_mixin.py:109} INFO - [2022-11-14 06:22:29,613] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/etl_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/etl_dag.py", line 4, in <module>
+    from etl import run_etl
+  File "/opt/airflow/dags/etl.py", line 216, in <module>
+    run_etl()
+  File "/opt/airflow/dags/etl.py", line 210, in run_etl
+    get_events().to_sql(name='events', con=conn, index=False, if_exists='replace')
+  File "/opt/airflow/dags/etl.py", line 103, in get_events
+    r = rq.get(f'{baseurl}{endpoint}/{a}{events_}?ts={ts}&apikey={api_key}&hash={hash_key}')
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 706, in urlopen
+    chunked=chunked,
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 394, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connection.py", line 239, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "/usr/local/lib/python3.7/http/client.py", line 1281, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/local/lib/python3.7/http/client.py", line 1327, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.7/http/client.py", line 1276, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.7/http/client.py", line 1036, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.7/http/client.py", line 976, in send
+    self.connect()
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connection.py", line 175, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/util/connection.py", line 86, in create_connection
+    sock.connect(sa)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/timeout.py", line 37, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/etl_dag.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.2.3/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.2.3/best-practices.html#reducing-dag-complexity, PID: 2257
+[2022-11-14 06:22:29,640] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:22:29,655] {processor.py:171} INFO - Processing /opt/airflow/dags/etl_dag.py took 30.050 seconds
+[2022-11-14 06:22:59,797] {processor.py:163} INFO - Started process (PID=2310) to work on /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:22:59,803] {processor.py:642} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2022-11-14 06:22:59,804] {logging_mixin.py:109} INFO - [2022-11-14 06:22:59,804] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:23:00,727] {logging_mixin.py:109} INFO - Connecting to Marvel Database...
+[2022-11-14 06:23:29,808] {logging_mixin.py:109} INFO - [2022-11-14 06:23:29,807] {timeout.py:36} ERROR - Process timed out, PID: 2310
+[2022-11-14 06:23:29,811] {logging_mixin.py:109} INFO - [2022-11-14 06:23:29,809] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/etl_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/etl_dag.py", line 4, in <module>
+    from etl import run_etl
+  File "/opt/airflow/dags/etl.py", line 216, in <module>
+    run_etl()
+  File "/opt/airflow/dags/etl.py", line 210, in run_etl
+    get_events().to_sql(name='events', con=conn, index=False, if_exists='replace')
+  File "/opt/airflow/dags/etl.py", line 103, in get_events
+    r = rq.get(f'{baseurl}{endpoint}/{a}{events_}?ts={ts}&apikey={api_key}&hash={hash_key}')
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 706, in urlopen
+    chunked=chunked,
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 394, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connection.py", line 239, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "/usr/local/lib/python3.7/http/client.py", line 1281, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/local/lib/python3.7/http/client.py", line 1327, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.7/http/client.py", line 1276, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.7/http/client.py", line 1036, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.7/http/client.py", line 976, in send
+    self.connect()
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connection.py", line 175, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/util/connection.py", line 86, in create_connection
+    sock.connect(sa)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/timeout.py", line 37, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/etl_dag.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.2.3/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.2.3/best-practices.html#reducing-dag-complexity, PID: 2310
+[2022-11-14 06:23:29,834] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:23:29,855] {processor.py:171} INFO - Processing /opt/airflow/dags/etl_dag.py took 30.083 seconds
+[2022-11-14 06:24:00,006] {processor.py:163} INFO - Started process (PID=2355) to work on /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:24:00,007] {processor.py:642} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2022-11-14 06:24:00,008] {logging_mixin.py:109} INFO - [2022-11-14 06:24:00,008] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:24:00,644] {logging_mixin.py:109} INFO - Connecting to Marvel Database...
+[2022-11-14 06:24:30,009] {logging_mixin.py:109} INFO - [2022-11-14 06:24:30,009] {timeout.py:36} ERROR - Process timed out, PID: 2355
+[2022-11-14 06:24:30,013] {logging_mixin.py:109} INFO - [2022-11-14 06:24:30,010] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/etl_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/etl_dag.py", line 4, in <module>
+    from etl import run_etl
+  File "/opt/airflow/dags/etl.py", line 216, in <module>
+    run_etl()
+  File "/opt/airflow/dags/etl.py", line 210, in run_etl
+    get_events().to_sql(name='events', con=conn, index=False, if_exists='replace')
+  File "/opt/airflow/dags/etl.py", line 103, in get_events
+    r = rq.get(f'{baseurl}{endpoint}/{a}{events_}?ts={ts}&apikey={api_key}&hash={hash_key}')
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 706, in urlopen
+    chunked=chunked,
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 445, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 440, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/local/lib/python3.7/http/client.py", line 1373, in getresponse
+    response.begin()
+  File "/usr/local/lib/python3.7/http/client.py", line 319, in begin
+    version, status, reason = self._read_status()
+  File "/usr/local/lib/python3.7/http/client.py", line 280, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/local/lib/python3.7/socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/timeout.py", line 37, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/etl_dag.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.2.3/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.2.3/best-practices.html#reducing-dag-complexity, PID: 2355
+[2022-11-14 06:24:30,031] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:24:30,044] {processor.py:171} INFO - Processing /opt/airflow/dags/etl_dag.py took 30.041 seconds
+[2022-11-14 06:25:00,149] {processor.py:163} INFO - Started process (PID=2411) to work on /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:25:00,151] {processor.py:642} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2022-11-14 06:25:00,152] {logging_mixin.py:109} INFO - [2022-11-14 06:25:00,152] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:25:01,002] {logging_mixin.py:109} INFO - Connecting to Marvel Database...
+[2022-11-14 06:25:30,154] {logging_mixin.py:109} INFO - [2022-11-14 06:25:30,153] {timeout.py:36} ERROR - Process timed out, PID: 2411
+[2022-11-14 06:25:30,157] {logging_mixin.py:109} INFO - [2022-11-14 06:25:30,155] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/etl_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/etl_dag.py", line 4, in <module>
+    from etl import run_etl
+  File "/opt/airflow/dags/etl.py", line 216, in <module>
+    run_etl()
+  File "/opt/airflow/dags/etl.py", line 210, in run_etl
+    get_events().to_sql(name='events', con=conn, index=False, if_exists='replace')
+  File "/opt/airflow/dags/etl.py", line 103, in get_events
+    r = rq.get(f'{baseurl}{endpoint}/{a}{events_}?ts={ts}&apikey={api_key}&hash={hash_key}')
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 706, in urlopen
+    chunked=chunked,
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 394, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connection.py", line 239, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "/usr/local/lib/python3.7/http/client.py", line 1281, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/local/lib/python3.7/http/client.py", line 1327, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.7/http/client.py", line 1276, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.7/http/client.py", line 1036, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.7/http/client.py", line 976, in send
+    self.connect()
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connection.py", line 175, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/util/connection.py", line 86, in create_connection
+    sock.connect(sa)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/timeout.py", line 37, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/etl_dag.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.2.3/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.2.3/best-practices.html#reducing-dag-complexity, PID: 2411
+[2022-11-14 06:25:30,172] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:25:30,189] {processor.py:171} INFO - Processing /opt/airflow/dags/etl_dag.py took 30.043 seconds
+[2022-11-14 06:26:00,311] {processor.py:163} INFO - Started process (PID=2456) to work on /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:26:00,312] {processor.py:642} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2022-11-14 06:26:00,313] {logging_mixin.py:109} INFO - [2022-11-14 06:26:00,313] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:26:00,878] {logging_mixin.py:109} INFO - Connecting to Marvel Database...
+[2022-11-14 06:26:30,314] {logging_mixin.py:109} INFO - [2022-11-14 06:26:30,314] {timeout.py:36} ERROR - Process timed out, PID: 2456
+[2022-11-14 06:26:30,318] {logging_mixin.py:109} INFO - [2022-11-14 06:26:30,315] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/etl_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/etl_dag.py", line 4, in <module>
+    from etl import run_etl
+  File "/opt/airflow/dags/etl.py", line 216, in <module>
+    run_etl()
+  File "/opt/airflow/dags/etl.py", line 210, in run_etl
+    get_events().to_sql(name='events', con=conn, index=False, if_exists='replace')
+  File "/opt/airflow/dags/etl.py", line 103, in get_events
+    r = rq.get(f'{baseurl}{endpoint}/{a}{events_}?ts={ts}&apikey={api_key}&hash={hash_key}')
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 706, in urlopen
+    chunked=chunked,
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 394, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connection.py", line 239, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "/usr/local/lib/python3.7/http/client.py", line 1281, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/local/lib/python3.7/http/client.py", line 1327, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.7/http/client.py", line 1276, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.7/http/client.py", line 1036, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.7/http/client.py", line 976, in send
+    self.connect()
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connection.py", line 175, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/util/connection.py", line 86, in create_connection
+    sock.connect(sa)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/timeout.py", line 37, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/etl_dag.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.2.3/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.2.3/best-practices.html#reducing-dag-complexity, PID: 2456
+[2022-11-14 06:26:30,358] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:26:30,395] {processor.py:171} INFO - Processing /opt/airflow/dags/etl_dag.py took 30.088 seconds
+[2022-11-14 06:27:00,512] {processor.py:163} INFO - Started process (PID=2510) to work on /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:27:00,514] {processor.py:642} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2022-11-14 06:27:00,515] {logging_mixin.py:109} INFO - [2022-11-14 06:27:00,515] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:27:01,415] {logging_mixin.py:109} INFO - Connecting to Marvel Database...
+[2022-11-14 06:27:30,517] {logging_mixin.py:109} INFO - [2022-11-14 06:27:30,516] {timeout.py:36} ERROR - Process timed out, PID: 2510
+[2022-11-14 06:27:30,520] {logging_mixin.py:109} INFO - [2022-11-14 06:27:30,517] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/etl_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/etl_dag.py", line 4, in <module>
+    from etl import run_etl
+  File "/opt/airflow/dags/etl.py", line 216, in <module>
+    run_etl()
+  File "/opt/airflow/dags/etl.py", line 210, in run_etl
+    get_events().to_sql(name='events', con=conn, index=False, if_exists='replace')
+  File "/opt/airflow/dags/etl.py", line 103, in get_events
+    r = rq.get(f'{baseurl}{endpoint}/{a}{events_}?ts={ts}&apikey={api_key}&hash={hash_key}')
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 706, in urlopen
+    chunked=chunked,
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 445, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 440, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/local/lib/python3.7/http/client.py", line 1373, in getresponse
+    response.begin()
+  File "/usr/local/lib/python3.7/http/client.py", line 319, in begin
+    version, status, reason = self._read_status()
+  File "/usr/local/lib/python3.7/http/client.py", line 280, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/local/lib/python3.7/socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/timeout.py", line 37, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/etl_dag.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.2.3/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.2.3/best-practices.html#reducing-dag-complexity, PID: 2510
+[2022-11-14 06:27:30,536] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:27:30,549] {processor.py:171} INFO - Processing /opt/airflow/dags/etl_dag.py took 30.042 seconds
+[2022-11-14 06:28:00,662] {processor.py:163} INFO - Started process (PID=2556) to work on /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:28:00,664] {processor.py:642} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2022-11-14 06:28:00,665] {logging_mixin.py:109} INFO - [2022-11-14 06:28:00,665] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:28:01,510] {logging_mixin.py:109} INFO - Connecting to Marvel Database...
+[2022-11-14 06:28:30,669] {logging_mixin.py:109} INFO - [2022-11-14 06:28:30,669] {timeout.py:36} ERROR - Process timed out, PID: 2556
+[2022-11-14 06:28:30,673] {logging_mixin.py:109} INFO - [2022-11-14 06:28:30,670] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/etl_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/etl_dag.py", line 4, in <module>
+    from etl import run_etl
+  File "/opt/airflow/dags/etl.py", line 216, in <module>
+    run_etl()
+  File "/opt/airflow/dags/etl.py", line 210, in run_etl
+    get_events().to_sql(name='events', con=conn, index=False, if_exists='replace')
+  File "/opt/airflow/dags/etl.py", line 103, in get_events
+    r = rq.get(f'{baseurl}{endpoint}/{a}{events_}?ts={ts}&apikey={api_key}&hash={hash_key}')
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 706, in urlopen
+    chunked=chunked,
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 445, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 440, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/local/lib/python3.7/http/client.py", line 1373, in getresponse
+    response.begin()
+  File "/usr/local/lib/python3.7/http/client.py", line 319, in begin
+    version, status, reason = self._read_status()
+  File "/usr/local/lib/python3.7/http/client.py", line 280, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/local/lib/python3.7/socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/timeout.py", line 37, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/etl_dag.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.2.3/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.2.3/best-practices.html#reducing-dag-complexity, PID: 2556
+[2022-11-14 06:28:30,688] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:28:30,699] {processor.py:171} INFO - Processing /opt/airflow/dags/etl_dag.py took 30.041 seconds
+[2022-11-14 06:29:00,801] {processor.py:163} INFO - Started process (PID=2612) to work on /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:29:00,802] {processor.py:642} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2022-11-14 06:29:00,803] {logging_mixin.py:109} INFO - [2022-11-14 06:29:00,803] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:29:01,733] {logging_mixin.py:109} INFO - Connecting to Marvel Database...
+[2022-11-14 06:29:30,805] {logging_mixin.py:109} INFO - [2022-11-14 06:29:30,804] {timeout.py:36} ERROR - Process timed out, PID: 2612
+[2022-11-14 06:29:30,808] {logging_mixin.py:109} INFO - [2022-11-14 06:29:30,805] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/etl_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/etl_dag.py", line 4, in <module>
+    from etl import run_etl
+  File "/opt/airflow/dags/etl.py", line 216, in <module>
+    run_etl()
+  File "/opt/airflow/dags/etl.py", line 210, in run_etl
+    get_events().to_sql(name='events', con=conn, index=False, if_exists='replace')
+  File "/opt/airflow/dags/etl.py", line 103, in get_events
+    r = rq.get(f'{baseurl}{endpoint}/{a}{events_}?ts={ts}&apikey={api_key}&hash={hash_key}')
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 706, in urlopen
+    chunked=chunked,
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 445, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 440, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/local/lib/python3.7/http/client.py", line 1373, in getresponse
+    response.begin()
+  File "/usr/local/lib/python3.7/http/client.py", line 319, in begin
+    version, status, reason = self._read_status()
+  File "/usr/local/lib/python3.7/http/client.py", line 280, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/local/lib/python3.7/socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/timeout.py", line 37, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/etl_dag.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.2.3/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.2.3/best-practices.html#reducing-dag-complexity, PID: 2612
+[2022-11-14 06:29:30,825] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:29:30,840] {processor.py:171} INFO - Processing /opt/airflow/dags/etl_dag.py took 30.045 seconds
+[2022-11-14 06:30:00,945] {processor.py:163} INFO - Started process (PID=2659) to work on /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:30:00,947] {processor.py:642} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2022-11-14 06:30:00,947] {logging_mixin.py:109} INFO - [2022-11-14 06:30:00,947] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:30:01,676] {logging_mixin.py:109} INFO - Connecting to Marvel Database...
+[2022-11-14 06:30:30,949] {logging_mixin.py:109} INFO - [2022-11-14 06:30:30,949] {timeout.py:36} ERROR - Process timed out, PID: 2659
+[2022-11-14 06:30:30,956] {logging_mixin.py:109} INFO - [2022-11-14 06:30:30,952] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/etl_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/etl_dag.py", line 4, in <module>
+    from etl import run_etl
+  File "/opt/airflow/dags/etl.py", line 216, in <module>
+    run_etl()
+  File "/opt/airflow/dags/etl.py", line 208, in run_etl
+    get_comics().to_sql(name='comics', con=conn, index=False, if_exists='replace')
+  File "/opt/airflow/dags/etl.py", line 74, in get_comics
+    r = rq.get(f'{baseurl}{endpoint}/{a}{comics_}?ts={ts}&apikey={api_key}&hash={hash_key}')
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 706, in urlopen
+    chunked=chunked,
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 445, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 440, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/local/lib/python3.7/http/client.py", line 1373, in getresponse
+    response.begin()
+  File "/usr/local/lib/python3.7/http/client.py", line 319, in begin
+    version, status, reason = self._read_status()
+  File "/usr/local/lib/python3.7/http/client.py", line 280, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/local/lib/python3.7/socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/timeout.py", line 37, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/etl_dag.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.2.3/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.2.3/best-practices.html#reducing-dag-complexity, PID: 2659
+[2022-11-14 06:30:30,974] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:30:30,992] {processor.py:171} INFO - Processing /opt/airflow/dags/etl_dag.py took 30.049 seconds
+[2022-11-14 06:31:01,179] {processor.py:163} INFO - Started process (PID=2714) to work on /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:31:01,181] {processor.py:642} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2022-11-14 06:31:01,181] {logging_mixin.py:109} INFO - [2022-11-14 06:31:01,181] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:31:01,992] {logging_mixin.py:109} INFO - Connecting to Marvel Database...
+[2022-11-14 06:31:31,183] {logging_mixin.py:109} INFO - [2022-11-14 06:31:31,183] {timeout.py:36} ERROR - Process timed out, PID: 2714
+[2022-11-14 06:31:31,187] {logging_mixin.py:109} INFO - [2022-11-14 06:31:31,184] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/etl_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/etl_dag.py", line 4, in <module>
+    from etl import run_etl
+  File "/opt/airflow/dags/etl.py", line 216, in <module>
+    run_etl()
+  File "/opt/airflow/dags/etl.py", line 210, in run_etl
+    get_events().to_sql(name='events', con=conn, index=False, if_exists='replace')
+  File "/opt/airflow/dags/etl.py", line 103, in get_events
+    r = rq.get(f'{baseurl}{endpoint}/{a}{events_}?ts={ts}&apikey={api_key}&hash={hash_key}')
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 706, in urlopen
+    chunked=chunked,
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 445, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 440, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/local/lib/python3.7/http/client.py", line 1373, in getresponse
+    response.begin()
+  File "/usr/local/lib/python3.7/http/client.py", line 319, in begin
+    version, status, reason = self._read_status()
+  File "/usr/local/lib/python3.7/http/client.py", line 280, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/local/lib/python3.7/socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/timeout.py", line 37, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/etl_dag.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.2.3/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.2.3/best-practices.html#reducing-dag-complexity, PID: 2714
+[2022-11-14 06:31:31,203] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:31:31,213] {processor.py:171} INFO - Processing /opt/airflow/dags/etl_dag.py took 30.038 seconds
+[2022-11-14 06:32:01,317] {processor.py:163} INFO - Started process (PID=2759) to work on /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:32:01,319] {processor.py:642} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2022-11-14 06:32:01,321] {logging_mixin.py:109} INFO - [2022-11-14 06:32:01,321] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:32:02,133] {logging_mixin.py:109} INFO - Connecting to Marvel Database...
+[2022-11-14 06:32:31,324] {logging_mixin.py:109} INFO - [2022-11-14 06:32:31,324] {timeout.py:36} ERROR - Process timed out, PID: 2759
+[2022-11-14 06:32:31,329] {logging_mixin.py:109} INFO - [2022-11-14 06:32:31,325] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/etl_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/etl_dag.py", line 4, in <module>
+    from etl import run_etl
+  File "/opt/airflow/dags/etl.py", line 216, in <module>
+    run_etl()
+  File "/opt/airflow/dags/etl.py", line 210, in run_etl
+    get_events().to_sql(name='events', con=conn, index=False, if_exists='replace')
+  File "/opt/airflow/dags/etl.py", line 103, in get_events
+    r = rq.get(f'{baseurl}{endpoint}/{a}{events_}?ts={ts}&apikey={api_key}&hash={hash_key}')
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 706, in urlopen
+    chunked=chunked,
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 394, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connection.py", line 239, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "/usr/local/lib/python3.7/http/client.py", line 1281, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/local/lib/python3.7/http/client.py", line 1327, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.7/http/client.py", line 1276, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.7/http/client.py", line 1036, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.7/http/client.py", line 976, in send
+    self.connect()
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connection.py", line 175, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/util/connection.py", line 86, in create_connection
+    sock.connect(sa)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/timeout.py", line 37, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/etl_dag.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.2.3/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.2.3/best-practices.html#reducing-dag-complexity, PID: 2759
+[2022-11-14 06:32:31,386] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:32:31,410] {processor.py:171} INFO - Processing /opt/airflow/dags/etl_dag.py took 30.099 seconds
+[2022-11-14 06:33:01,561] {processor.py:163} INFO - Started process (PID=2814) to work on /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:33:01,564] {processor.py:642} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2022-11-14 06:33:01,564] {logging_mixin.py:109} INFO - [2022-11-14 06:33:01,564] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:33:02,671] {logging_mixin.py:109} INFO - Connecting to Marvel Database...
+[2022-11-14 06:33:31,567] {logging_mixin.py:109} INFO - [2022-11-14 06:33:31,566] {timeout.py:36} ERROR - Process timed out, PID: 2814
+[2022-11-14 06:33:31,570] {logging_mixin.py:109} INFO - [2022-11-14 06:33:31,567] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/etl_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/etl_dag.py", line 4, in <module>
+    from etl import run_etl
+  File "/opt/airflow/dags/etl.py", line 216, in <module>
+    run_etl()
+  File "/opt/airflow/dags/etl.py", line 210, in run_etl
+    get_events().to_sql(name='events', con=conn, index=False, if_exists='replace')
+  File "/opt/airflow/dags/etl.py", line 103, in get_events
+    r = rq.get(f'{baseurl}{endpoint}/{a}{events_}?ts={ts}&apikey={api_key}&hash={hash_key}')
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 706, in urlopen
+    chunked=chunked,
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 394, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connection.py", line 239, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "/usr/local/lib/python3.7/http/client.py", line 1281, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/local/lib/python3.7/http/client.py", line 1327, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.7/http/client.py", line 1276, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.7/http/client.py", line 1036, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.7/http/client.py", line 976, in send
+    self.connect()
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connection.py", line 175, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/util/connection.py", line 86, in create_connection
+    sock.connect(sa)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/timeout.py", line 37, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/etl_dag.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.2.3/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.2.3/best-practices.html#reducing-dag-complexity, PID: 2814
+[2022-11-14 06:33:31,586] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:33:31,596] {processor.py:171} INFO - Processing /opt/airflow/dags/etl_dag.py took 30.045 seconds
+[2022-11-14 06:34:01,769] {processor.py:163} INFO - Started process (PID=2861) to work on /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:34:01,774] {processor.py:642} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2022-11-14 06:34:01,775] {logging_mixin.py:109} INFO - [2022-11-14 06:34:01,775] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2022-11-14 06:34:02,398] {logging_mixin.py:109} INFO - Connecting to Marvel Database...
